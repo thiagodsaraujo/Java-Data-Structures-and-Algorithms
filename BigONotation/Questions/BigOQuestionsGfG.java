@@ -1,6 +1,6 @@
 package BigONotation.Questions;
 
-public class BigOQuestions2 {
+public class BigOQuestionsGfG {
     static int findProductSum(int A[], int n)
     {
         // calculating array sum (a1 + a2 ... + an)
