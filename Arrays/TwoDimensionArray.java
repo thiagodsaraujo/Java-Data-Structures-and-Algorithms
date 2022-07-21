@@ -39,8 +39,39 @@ public class TwoDimensionArray {
         }
     }
 
+    //Traversing Two Dimensional Array
+    public void traverse2DArray(){
+        for (int row = 0; row < arr.length; row++){
+            for (int col = 0; col < arr[0].length; col++){
+                System.out.print(arr[row][col] + " ");
+            }
+            System.out.println();
+        }
+    }
 
+    // Searching  2D Array
 
+    public  void searchingValue(int value){
+        for (int row = 0; row < arr.length; row++){
+            for (int col=0; col< arr[0].length; col++){
+                if (arr[row][col] == value){
+                    System.out.println("Value is found at row: " + row + ", and Col: " + col);
+                    return;
+                }
+            }
+        }
+    System.out.println("Value is not found!");
+    }
+
+    // Deleting Array Element in 2D Array
+    public void deletingValueFromArray(int row, int col){
+        try {
+            System.out.println("Successfully deleted: " + arr[row][col]);
+            arr[row][col] = Integer.MIN_VALUE;
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("This index is not valid for array");
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -63,10 +94,24 @@ public class TwoDimensionArray {
         TwoDimensionArray sda = new TwoDimensionArray(3,3);
         sda.insertValueInTheArray(0,0,10);
         sda.insertValueInTheArray(0,1,20);
-        System.out.println(Arrays.deepToString(sda.arr));
+        sda.insertValueInTheArray(1,0,30);
+        sda.insertValueInTheArray(2,0,40);
+        sda.insertValueInTheArray(2,1,50);
+//        System.out.println(Arrays.deepToString(sda.arr));
 
-        sda.acessCell(0,0);
-        sda.acessCell(0,1);
+//        sda.acessCell(0,0);
+//        sda.acessCell(0,1);
+
+        // Traverse 2D Array
+        sda.traverse2DArray();
+
+        //Searching Value in 2D Array
+        sda.searchingValue(70);
+        System.out.println("\n------------------------------");
+        //Deleting Value in 2D Array
+        System.out.println(Arrays.deepToString(sda.arr));
+        sda.deletingValueFromArray(0, 0);
+        System.out.println(Arrays.deepToString(sda.arr));
     }
 
 }
