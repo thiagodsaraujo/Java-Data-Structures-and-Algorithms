@@ -1,6 +1,17 @@
 package Arrays;
 import java.util.Arrays;
 public class TwoDimensionArray {
+
+    /**
+     * When to use:
+     * - To store multiple variables of same data type;
+     * - Random acess;
+     *
+     * When to avoid
+     * - Same data type elements;
+     * - Reserve memory;
+     */
+
     int arr[][] = null;
 
     // Constructor
