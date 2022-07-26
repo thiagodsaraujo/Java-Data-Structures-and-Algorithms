@@ -1,4 +1,4 @@
-package Queue;
+package Queue.LinearQueue;
 
 public class Main {
     public static void main(String[] args) {
