@@ -136,4 +136,13 @@ public class SinglyLinkedList {
         }
     }
 
+    // Deletion Entire SinglyLinkedList
+    // Time Complexity = Big O = 1
+    // Space Complexity = Big O = 1
+    public void deleteSLL(){
+        head = null;
+        tail = null;
+        System.out.println("The SLL successfully");
+    }
+
 }
