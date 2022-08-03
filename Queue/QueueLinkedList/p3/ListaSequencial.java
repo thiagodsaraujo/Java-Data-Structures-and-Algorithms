@@ -84,6 +84,7 @@ public class ListaSequencial {
                 ", inseridos=" + inseridos +
                 ", paresPrimeiro=" + paresPrimeiro +
                 ", imparesDepois=" + imparesDepois +
+                ", tamanhodalista=" + arrayInterno.length +
                 '}';
     }
 }

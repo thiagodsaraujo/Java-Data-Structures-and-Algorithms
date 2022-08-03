@@ -1,5 +1,7 @@
 package Queue.QueueLinkedList.p3;
 
+import java.util.Arrays;
+
 public class FilaSequencial {
 
     private static final int TAMANHO_INICIAL = 10;
@@ -12,6 +14,10 @@ public class FilaSequencial {
         this.arrayInterno = new Object[TAMANHO_INICIAL];
     }
 
+    /**
+     * @param elemento
+     * @throws ValorInvalidoException
+     */
     public void enQueue(Object elemento) throws ValorInvalidoException{
         if (elemento == null){
             throw new ValorInvalidoException("Valor invalido! Tente Novamente");
@@ -24,14 +30,14 @@ public class FilaSequencial {
 
     private void aumentarArray(){
         if (inseridos == arrayInterno.length && aumentou == 0){
-            int newSize = (int) (inseridos * 1.8);
+            int newSize = (int) (TAMANHO_INICIAL * 1.8);
             Object[] novoArray = new Object[newSize];
 
             for (int i = 0; i < arrayInterno.length; i++) {
                 novoArray[i] = arrayInterno[i];
             }
         } else {
-            int newSize = (int) (inseridos * 2);
+            int newSize = (int) (arrayInterno.length * 1.8);
 
             Object[] novoArray = new Object[newSize];
 
@@ -69,4 +75,13 @@ public class FilaSequencial {
         arrayInterno = new Object[TAMANHO_INICIAL];
     }
 
+    @Override
+    public String toString() {
+        return "FilaSequencial{" +
+                "arrayInterno=" + Arrays.toString(arrayInterno) +
+                ", inseridos=" + inseridos +
+                ", aumentou=" + aumentou +
+                ", tamanho=" + arrayInterno.length +
+                '}';
+    }
 }
